@@ -1,0 +1,117 @@
+body {
+    text-align: center;
+    margin: 20px;
+  }
+            
+  footer{
+    text-align:center
+  }
+  submit{
+    text-align:center
+  }
+  .slider {
+    position: absolute;top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 60px;
+    padding: 30px;
+    padding-left: 40px;
+    background: #fcfcfc;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 15px 40px #7E6D5766;
+}
+.slider p {
+    font-size: 26px;
+    font-weight: 600;
+    font-family: Open Sans;
+    padding-left: 30px;
+    color: black;
+}
+.slider input[type="range"] {
+  	width: 420px;
+ 	height: 2px;
+  	background: black;
+  	border: none;
+  	outline: none;
+}
+.slider input[type="range"]::-webkit-slider-thumb {
+   	-webkit-appearance: none !important;
+    width: 30px;
+    height:30px;
+    background: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider input[type="range"]::-webkit-slider-thumb:hover {
+    background: black;
+}
+/* style.css */
+
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background color to the body */
+body {
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+}
+
+/* Navigation menu styles */
+nav {
+  background-color: #444;
+  color: #fff;
+  padding: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer img {
+  width: 150px; /* Adjust the width as needed */
+  height: auto;
+}
