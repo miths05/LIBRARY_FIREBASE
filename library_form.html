@@ -1,0 +1,153 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Library Management</title>
+</head>
+
+<body>
+  <header>
+  <H1>Become A Member Of Our Library!</H1>
+    <br> <br>
+    
+  <h2 styletext-align="center">REGISTERATION</h2>
+</header>
+
+  
+    <br><br><br>
+      
+  <p>
+    <label for="f_name">First Name:</label>
+    <input type="text"  name="f_name" id="f_name" value="">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                     
+    <label for="l_name">Last Name:</label>
+	<input type="text" name="l_name" id="l_name" value="">
+    <br><br><br>
+    <labelfor="Number" name="numb">Number:</label>   
+    <input type="number" value="" name="numb" id="numb"required>		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                
+     <label for="email">Email:</label>
+     <input type="text" value="" id="email"  name="numb">          <br><br>
+     <br>
+     <label for="gender">Gender:</label>
+    <select name="gender" id="gender">
+      <option value="Male"name="gender" id="gender">Male</option>
+      <option value="Female" name="gender" id="gender">Female</option>
+      <option value="Mentally ill">Mentally ill</option>
+    </select>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                     
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                     
+
+    <label for="category" name="category">Choose your preferred categories of books:</label><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                     
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                     
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                     
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>                                                  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                     
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                     
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                     
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                     
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                     
+
+    <input type="checkbox" id="category" value="category"name="category">
+    <label for="category"name="category">Fiction</label>
+    <input type="checkbox" id="historical" value="historical" name="category">
+    <label for="historical" name="category">Historical</label>
+    <input type="checkbox" id="romance" value="romance"name="category">
+    <label for="romance"label="category">Romance</label>
+    <input type="checkbox" id="thriller" value="thrille" name="category">
+    <label for="thriller" name="category">thriller</label>
+    <input type="checkbox" id="Dystopian" value="Dystopian" name="category">
+    <label for="Dystopian" name="category">Dystopian</label>
+          <br><br><br>
+          <label for="age" name="age">Age:</label>
+          <input type="number" id="age" name="age" min="5">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                     
+     
+          <label for="branch" name="branch">Choose the nearest library:</label>
+          <input list="branches" id="branch" name="branch" />
+          <datalist id="branches">
+            <option value="Pune"name="branch"></option>
+            <option value="Banglore"></option>
+            <option value="Mumbai"></option>
+            <option value="Gurugram"></option>
+            <option value="Delhi"></option>
+            <option value="Hyderabad"></option>
+            <option value="Lucknow"></option>
+          </datalist>
+          <br><br>     
+                                                     
+  <h2 style="background-color: #444;
+  color: #fff;
+  padding: 15px;">LOGIN CREDENTIALS</h2 ><br>
+  <label for="uname" name="uname">UserName:</label>
+ <input type="text" id="uname" name="uname" required> 
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+<label for="pwd" name="pwd" >Password</label>  
+<input type="password" name ="pwd" id="pwd" required>                     
+   
+ <br><br><br>
+ 
+ <input type="submit" id="submit" value="submit" name="submit" >
+
+  <br><br>
+   </p>
+   <script type="module">
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDjREIEHNlAlklwNG8mK5bxEMuffmc8JDw",
+  authDomain: "library-a1bba.firebaseapp.com",
+  projectId: "library-a1bba",
+  storageBucket: "library-a1bba.appspot.com",
+  messagingSenderId: "92309504347",
+  appId: "1:92309504347:web:7cf18f5857e11ab0019a7e",
+  measurementId: "G-N01R5XNL11"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+  document.getElementById('submit').addEventListener('click', function(e){
+    e.preventDefault();
+
+    set(ref(db, 'user/' + document.getElementById("uname").value),
+    {
+        uname: document.getElementById("uname").value,
+        f_name: document.getElementById("f_name").value,
+        l_name: document.getElementById("l_name").value,
+        numb: document.getElementById("numb").value,
+        email: document.getElementById("email").value,
+        gender: document.getElementById("gender").value,
+        category: document.getElementById("category").value,
+        age: document.getElementById("age").value,
+        branch: document.getElementById("branch").value,
+        pwd: document.getElementById("pwd").value,
+
+
+
+    });
+    alert("login succesful")
+  })
+
+   </script>
+                    
+</body>
+<footer>
+  <p >@CopyRights Reserve Library Management
+                                                     </p>
+</footer>
+</html>
