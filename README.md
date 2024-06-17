@@ -17,7 +17,7 @@ Login Credentials: Allows users to set a username and password for future login 
 
 Firebase Integration: Uses Firebase for storing user registration data.
 
-#Technologies Used
+# Technologies Used
 
 JavaScript: Client-side scripting to handle form submission and interaction with Firebase.
 
